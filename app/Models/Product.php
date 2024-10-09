@@ -12,7 +12,7 @@ class Product extends Model
 
     protected $table = 'products';
     protected $fillable = [
-        'category_id',
+        'brand_id',
         'name',
         'slug',
         'price',
@@ -21,10 +21,11 @@ class Product extends Model
         'description',
         'content',
         'status',
+        'specification'
     ];
 
-    public function category(): BelongsTo
+    public function brand(): BelongsTo
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(Brand::class);
     }
 }

@@ -20,6 +20,7 @@ class Order extends Model
         'ship_phone',
         'ship_address',
         'total',
+        'status'
     ];
 
     public function user(): BelongsTo

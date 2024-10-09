@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('categories', function (Blueprint $table) {
+        Schema::create('brands', function (Blueprint $table) {
             $table->id();
             $table->string('name', 255);
             $table->string('description', 255)->nullable();
@@ -20,11 +20,12 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('name', 255);
-            $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
+            $table->foreignId('brand_id')->constrained('brands')->onDelete('cascade');
             $table->integer('sale')->default(0);
             $table->integer('price');
             $table->string('size', 255)->nullable();
             $table->string('description', 255)->nullable();
+            $table->string('specification', 255)->nullable();
             $table->timestamps();
         });
         Schema::create('orders', function (Blueprint $table) {
@@ -36,6 +37,7 @@ return new class extends Migration
             $table->string('ship_phone', 255);
             $table->string('ship_address', 255);
             $table->float('total', 8, 2);
+            $table->enum('status', ['pending', 'shipping', 'completed'])->default('pending');
             $table->timestamps();
         });
         Schema::create('order_details', function (Blueprint $table) {
@@ -66,6 +68,6 @@ return new class extends Migration
         Schema::dropIfExists('order_details');
         Schema::dropIfExists('orders');
         Schema::dropIfExists('products');
-        Schema::dropIfExists('categories');
+        Schema::dropIfExists('brands');
     }
 };
