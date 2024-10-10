@@ -9,7 +9,8 @@
                         <h2 class="h2">Đăng Nhập</h2>
                     </div>
                     <div class="card-body">
-                        <form method="POST">
+                        <form method="POST" action="{{ route('auth.post_login') }}">
+                            @csrf
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
                                 <input type="email" class="form-control" id="email" name="email" required placeholder="Nhập email">

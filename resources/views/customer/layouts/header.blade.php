@@ -9,9 +9,17 @@
                 <a class="navbar-sm-brand text-light text-decoration-none" href="tel:010-020-0340">099999999</a>
             </div>
             <div>
-                <a class="text-light" href="{{ route('auth.login') }}">Đăng nhập</a>
+                @if(auth()->check())
+                    <a class="text-light" href="#"> {{ auth()->user()->name ?? '' }} </a>
+                @else
+                    <a class="text-light" href="{{ route('auth.login') }}">Đăng nhập</a>
+                @endif
                 <a class="text-light" href="#" target="_blank">/</a>
-                <a class="text-light" href="{{ route('auth.register') }}">Đăng ký</a>
+                @if(auth()->check())
+                    <a class="text-light" href="{{ route('auth.logout') }}"> Đăng xuất </a>
+                @else
+                    <a class="text-light" href="{{ route('auth.register') }}">Đăng ký</a>
+                @endif
             </div>
         </div>
     </div>
