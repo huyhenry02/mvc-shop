@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Admin User",
+        "role_type": "admin",
+        "phone": "123456789",
+        "email": "admin@example.com",
+        "password": "123"
+    },
+    {
+        "name": "Customer User 1",
+        "role_type": "customer",
+        "phone": "987654321",
+        "email": "customer_1@example.com",
+        "password": "123"
+    },
+    {
+        "name": "Customer User 2",
+        "role_type": "customer",
+        "phone": "987654322",
+        "email": "customer_2@example.com",
+        "password": "123"
+    },
+    {
+        "name": "Customer User 3",
+        "role_type": "customer",
+        "phone": "987654323",
+        "email": "customer_3@example.com",
+        "password": "123"
+    },
+    {
+        "name": "Customer User 4",
+        "role_type": "customer",
+        "phone": "987654324",
+        "email": "customer_4@example.com",
+        "password": "123"
+    }
+
+]
