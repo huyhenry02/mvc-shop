@@ -1,6 +1,22 @@
 [
     {
-        "name": "",
-        "description": ""
+        "name": "Nike",
+        "description": "Nike là một thương hiệu toàn cầu nổi tiếng về giày thể thao và trang phục thể thao chất lượng cao, với các dòng sản phẩm biểu tượng như Air Max và Air Jordan."
+    },
+    {
+        "name": "Adidas",
+        "description": "Adidas là một thương hiệu phổ biến chuyên cung cấp giày và trang phục thể thao, nổi bật với các mẫu giày như UltraBoost và Stan Smith."
+    },
+    {
+        "name": "Puma",
+        "description": "Puma là thương hiệu giày thể thao được ưa chuộng, nổi tiếng với các sản phẩm kết hợp giữa phong cách thời trang và hiệu suất vận động."
+    },
+    {
+        "name": "Converse",
+        "description": "Converse là thương hiệu giày lâu đời, nổi tiếng với các mẫu giày vải phong cách cổ điển như Chuck Taylor All Star."
+    },
+    {
+        "name": "Vans",
+        "description": "Vans là thương hiệu giày đường phố phổ biến, nổi bật với các mẫu giày trượt ván và phong cách trẻ trung, năng động."
     }
 ]

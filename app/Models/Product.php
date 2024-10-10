@@ -21,7 +21,8 @@ class Product extends Model
         'description',
         'content',
         'status',
-        'specification'
+        'specification',
+        'image'
     ];
 
     public function brand(): BelongsTo

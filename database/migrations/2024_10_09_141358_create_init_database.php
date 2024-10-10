@@ -21,11 +21,12 @@ return new class extends Migration
             $table->id();
             $table->string('name', 255);
             $table->foreignId('brand_id')->constrained('brands')->onDelete('cascade');
-            $table->integer('sale')->default(0);
+            $table->string('sale');
             $table->integer('price');
             $table->string('size', 255)->nullable();
             $table->string('description', 255)->nullable();
             $table->string('specification', 255)->nullable();
+            $table->text('image')->nullable();
             $table->timestamps();
         });
         Schema::create('orders', function (Blueprint $table) {
