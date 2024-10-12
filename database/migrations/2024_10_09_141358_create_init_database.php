@@ -23,7 +23,6 @@ return new class extends Migration
             $table->foreignId('brand_id')->constrained('brands')->onDelete('cascade');
             $table->string('sale');
             $table->integer('price');
-            $table->string('size', 255)->nullable();
             $table->string('description', 255)->nullable();
             $table->string('specification', 255)->nullable();
             $table->text('image')->nullable();
@@ -36,8 +35,9 @@ return new class extends Migration
             $table->date('order_date');
             $table->string('ship_name', 255);
             $table->string('ship_phone', 255);
+            $table->string('ship_email', 255);
             $table->string('ship_address', 255);
-            $table->float('total', 8, 2);
+            $table->integer('total');
             $table->enum('status', ['pending', 'shipping', 'completed'])->default('pending');
             $table->timestamps();
         });
@@ -45,8 +45,18 @@ return new class extends Migration
             $table->id();
             $table->foreignId('order_id')->constrained('orders')->onDelete('cascade');
             $table->foreignId('product_id')->constrained('products')->onDelete('cascade');
+            $table->string('size');
             $table->integer('quantity');
-            $table->float('sub_total', 8, 2);
+            $table->integer('sub_total');
+            $table->timestamps();
+        });
+        Schema::create('carts', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            $table->foreignId('product_id')->constrained('products')->onDelete('cascade');
+            $table->string('size');
+            $table->integer('quantity');
+            $table->integer('sub_total');
             $table->timestamps();
         });
         Schema::create('images', function (Blueprint $table) {
@@ -58,6 +68,7 @@ return new class extends Migration
             $table->string('mime_type');
             $table->timestamps();
         });
+
     }
 
     /**
@@ -65,6 +76,7 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::dropIfExists('carts');
         Schema::dropIfExists('images');
         Schema::dropIfExists('order_details');
         Schema::dropIfExists('orders');

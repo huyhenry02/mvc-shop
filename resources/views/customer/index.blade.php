@@ -119,8 +119,8 @@
             <div class="row">
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
-                        <a href="shop-single.html">
-                            <img src="/customer/img/feature_prod_01.jpg" class="card-img-top" alt="...">
+                        <a href="#">
+                            <img src="/customer/img/feature_prod_01_v2.jpg" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
@@ -133,7 +133,7 @@
                                 </li>
                                 <li class="text-muted text-right">₫240.000</li>
                             </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Giày Tập Gym</a>
+                            <a href="#" class="h2 text-decoration-none text-dark">Giày Tập Gym</a>
                             <p class="card-text">
                                 Được thiết kế đặc biệt cho những người yêu thích thể thao, chắc chắn mang đến sự thoải mái.
                             </p>
@@ -143,8 +143,8 @@
                 </div>
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
-                        <a href="shop-single.html">
-                            <img src="/customer/img/feature_prod_02.jpg" class="card-img-top" alt="...">
+                        <a href="#">
+                            <img src="/customer/img/feature_prod_02_v2.jpg" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
@@ -157,7 +157,7 @@
                                 </li>
                                 <li class="text-muted text-right">₫480.000</li>
                             </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Giày Da Thời Trang</a>
+                            <a href="#" class="h2 text-decoration-none text-dark">Giày Da Thời Trang</a>
                             <p class="card-text">
                                 Mẫu giày hoàn hảo cho những buổi tiệc tùng, mang đến sự sang trọng và đẳng cấp.
                             </p>
@@ -167,8 +167,8 @@
                 </div>
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
-                        <a href="shop-single.html">
-                            <img src="/customer/img/feature_prod_03.jpg" class="card-img-top" alt="...">
+                        <a href="#">
+                            <img src="/customer/img/feature_prod_03_v2.jpg" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
@@ -181,7 +181,7 @@
                                 </li>
                                 <li class="text-muted text-right">₫350.000</li>
                             </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Giày Bốt</a>
+                            <a href="#" class="h2 text-decoration-none text-dark">Giày thể thao</a>
                             <p class="card-text">
                                 Thiết kế chắc chắn, bảo vệ đôi chân bạn trong những chuyến đi dã ngoại.
                             </p>

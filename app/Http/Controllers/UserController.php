@@ -22,6 +22,21 @@ class UserController extends Controller
         return view('customer.register');
     }
 
+    public function register(Request $request): RedirectResponse
+    {
+        try {
+            $input = $request->all();
+            $input['role_type'] = User::ROLE_CUSTOMER;
+            $input['password'] = bcrypt($input['password']);
+            $user = new User();
+            $user->fill($input);
+            $user->save();
+            return redirect()->route('auth.login');
+        }catch (Exception $e) {
+            return redirect()->route('auth.register')->with('error', $e->getMessage());
+        }
+    }
+
     public function post_login(Request $request): ?RedirectResponse
     {
         try {

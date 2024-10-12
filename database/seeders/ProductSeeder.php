@@ -27,7 +27,6 @@ class ProductSeeder extends Seeder
                 'brand_id' => $item->brand_id,
                 'sale' => $item->sale,
                 'price' => $item->price,
-                'size' => $item->size,
                 'description' => $item->description,
                 'specification' => $item->specification,
                 'image' => $item->image,

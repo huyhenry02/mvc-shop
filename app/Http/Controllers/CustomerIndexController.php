@@ -14,9 +14,12 @@ class CustomerIndexController extends Controller
         return view('customer.index');
     }
 
-    public function show_productDetail(): View|Factory|Application
+    public function show_productDetail(Product $model): View|Factory|Application
     {
-        return view('customer.product_detail');
+        return view('customer.product_detail',
+            [
+                'model' => $model
+            ]);
     }
 
     public function show_shop(): View|Factory|Application

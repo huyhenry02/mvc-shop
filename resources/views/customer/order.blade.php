@@ -1,3 +1,4 @@
+@php use App\Models\Order; @endphp
 @extends('customer.layouts.main')
 @section('content')
     <!-- Start Order List Page -->
@@ -16,28 +17,32 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>#123456789</td>
-                        <td>10/10/2024</td>
-                        <td><span class="text-warning">Đang Giao Hàng</span></td>
-                        <td>₫1,200,000</td>
-                        <td><button class="btn btn-info btn-sm" data-toggle="modal" data-target="#orderDetailModal" onclick="showOrderDetails('#123456789')">Xem Chi Tiết</button></td>
-                    </tr>
-                    <tr>
-                        <td>#987654321</td>
-                        <td>05/10/2024</td>
-                        <td><span class="text-success">Đã Giao Hàng</span></td>
-                        <td>₫950,000</td>
-                        <td><button class="btn btn-info btn-sm" data-toggle="modal" data-target="#orderDetailModal" onclick="showOrderDetails('#987654321')">Xem Chi Tiết</button></td>
-                    </tr>
-                    <tr>
-                        <td>#123789456</td>
-                        <td>01/10/2024</td>
-                        <td><span class="text-danger">Đã Hủy</span></td>
-                        <td>₫0</td>
-                        <td><button class="btn btn-info btn-sm" data-toggle="modal" data-target="#orderDetailModal" onclick="showOrderDetails('#123789456')">Xem Chi Tiết</button></td>
-                    </tr>
-                    <!-- Thêm nhiều đơn hàng ở đây -->
+                    @foreach($data as $value)
+                        <tr>
+                            <td> {{ $value['code'] ?? '' }}</td>
+                            <td>{{ $value['order_date'] ?? '' }}</td>
+                            <td>
+                                @switch( $value['status'] )
+                                    @case( $value['status'] === Order::STATUS_PENDING )
+                                        <span class="text-warning">Chờ xác nhận</span>
+                                        @break
+                                    @case( $value['status'] === Order::STATUS_SHIPPING )
+                                        <span class="text-info">Đang giao hàng</span>
+                                        @break
+                                    @case( $value['status'] === Order::STATUS_COMPLETED )
+                                        <span class="text-success">Giao hàng thành công</span>
+                                        @break
+                                @endswitch
+                            </td>
+                            <td>₫{{ number_format($value['total'], 0, ',', '.') ?? '' }}</td>
+                            <td>
+                                <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#orderDetailModal"
+                                        onclick="showOrderDetails({{ json_encode($value, JSON_THROW_ON_ERROR) }})">Xem
+                                    Chi Tiết
+                                </button>
+                            </td>
+                        </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>
@@ -45,7 +50,8 @@
     </div>
 
     <!-- Modal for Order Details -->
-    <div class="modal fade" id="orderDetailModal" tabindex="-1" role="dialog" aria-labelledby="orderDetailLabel" aria-hidden="true">
+    <div class="modal fade" id="orderDetailModal" tabindex="-1" role="dialog" aria-labelledby="orderDetailLabel"
+         aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -131,46 +137,41 @@
 
     </style>
     <script>
-        function showOrderDetails(orderId) {
-            const orders = {
-                '#123456789': {
-                    date: '10/10/2024',
-                    status: 'Đang Giao Hàng',
-                    total: '₫1,200,000',
-                    items: ['Giày Thể Thao A', 'Giày Công Sở B']
-                },
-                '#987654321': {
-                    date: '05/10/2024',
-                    status: 'Đã Giao Hàng',
-                    total: '₫950,000',
-                    items: ['Giày Đá Bóng C']
-                },
-                '#123789456': {
-                    date: '01/10/2024',
-                    status: 'Đã Hủy',
-                    total: '₫0',
-                    items: []
-                }
-            };
+        function showOrderDetails(order) {
+            console.log('order', order);
+            document.getElementById('orderId').innerText = order.code;
+            document.getElementById('orderDate').innerText = order.order_date;
 
-            const order = orders[orderId];
-            document.getElementById('orderId').innerText = orderId;
-            document.getElementById('orderDate').innerText = order.date;
-            document.getElementById('orderStatus').innerText = order.status;
-            document.getElementById('orderTotal').innerText = order.total;
+            let statusText = '';
+            switch (order.status) {
+                case '{{ Order::STATUS_PENDING }}':
+                    statusText = 'Chờ xác nhận';
+                    break;
+                case '{{ Order::STATUS_SHIPPING }}':
+                    statusText = 'Đang giao hàng';
+                    break;
+                case '{{ Order::STATUS_COMPLETED }}':
+                    statusText = 'Giao hàng thành công';
+                    break;
+                default:
+                    statusText = 'Trạng thái không xác định';
+            }
+            document.getElementById('orderStatus').innerText = statusText;
+            document.getElementById('orderTotal').innerText = '₫' + new Intl.NumberFormat().format(order.total);
 
             const orderItemsList = document.getElementById('orderItemsList');
             orderItemsList.innerHTML = '';
+
             order.items.forEach(item => {
                 const li = document.createElement('li');
-                li.innerText = item;
+                li.innerText = `${item.product_name} - Kích cỡ: ${item.size} - Số lượng: ${item.quantity} - Tổng: ₫${item.sub_total}`;
                 orderItemsList.appendChild(li);
             });
         }
 
+
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-
 
 @endsection

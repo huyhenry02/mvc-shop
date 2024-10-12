@@ -21,13 +21,7 @@
         <!--  Header Start -->
         @include('admin.layouts.header')
         <!--  Header End -->
-        <div class="container-fluid">
-            <div class="card">
-                <div class="card-body">
-                    @yield('content')
-                </div>
-            </div>
-        </div>
+        @yield('content')
     </div>
 </div>
 <script src="/admin/libs/jquery/dist/jquery.min.js"></script>

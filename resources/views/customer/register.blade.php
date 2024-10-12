@@ -9,7 +9,8 @@
                         <h2 class="h2">Đăng Ký Tài Khoản</h2>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="">
+                        <form method="POST" action="{{ route('auth.post_register') }}">
+                            @csrf
                             <div class="mb-3">
                                 <label for="name" class="form-label">Họ và Tên</label>
                                 <input type="text" class="form-control" id="name" name="name" required placeholder="Nhập họ và tên">
@@ -19,12 +20,12 @@
                                 <input type="email" class="form-control" id="email" name="email" required placeholder="Nhập email">
                             </div>
                             <div class="mb-3">
-                                <label for="password" class="form-label">Mật khẩu</label>
-                                <input type="password" class="form-control" id="password" name="password" required placeholder="Nhập mật khẩu">
+                                <label for="phone" class="form-label">Số điện thoại</label>
+                                <input type="text" class="form-control" id="phone" name="phone" required placeholder="Số điện thoại">
                             </div>
                             <div class="mb-3">
-                                <label for="password_confirmation" class="form-label">Xác Nhận Mật Khẩu</label>
-                                <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" required placeholder="Xác nhận mật khẩu">
+                                <label for="password" class="form-label">Mật Khẩu</label>
+                                <input type="password" class="form-control" id="password" name="password" required placeholder="Mật khẩu">
                             </div>
                             <div class="mb-3 text-center">
                                 <button type="submit" class="btn btn-success btn-lg">Đăng Ký</button>

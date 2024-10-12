@@ -4,7 +4,6 @@
         "brand_id": 1,
         "sale": "10%",
         "price": 3000000,
-        "size": "36-45",
         "description": "Giày Nike Air Max 270 với đệm khí Max Air nổi bật, tạo cảm giác êm ái và thoải mái.",
         "specification": "Chất liệu: vải lưới và cao su; Phù hợp cho chạy bộ và hoạt động thường ngày.",
         "image": "https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/gorfwjchoasrrzr1fggt/AIR+MAX+270.png"
@@ -14,7 +13,6 @@
         "brand_id": 1,
         "sale": "15%",
         "price": 4500000,
-        "size": "36-48",
         "description": "Giày Nike Air Jordan 1 Retro High mang phong cách cổ điển của dòng Air Jordan, nổi bật với logo Jumpman.",
         "specification": "Chất liệu: da thật và cao su; Phù hợp cho bóng rổ và thời trang đường phố.",
         "image": "https://static.nike.com/a/images/t_default/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/e6e9a482-3df8-446d-8c83-7c4ae1855302/AIR+JORDAN+1+MID+%28GS%29.png"
@@ -24,7 +22,6 @@
         "brand_id": 1,
         "sale": "12%",
         "price": 3200000,
-        "size": "36-47",
         "description": "Giày chạy bộ Nike React Infinity Run với đệm React nhẹ và linh hoạt, giúp hỗ trợ bàn chân tối đa.",
         "specification": "Chất liệu: vải dệt và đệm React; Phù hợp cho chạy đường dài.",
         "image": "https://product.hstatic.net/200000563747/product/upload_2a1f5b33f5c747f9a2c822320c8a762b_1024x1024.jpg"
@@ -34,7 +31,6 @@
         "brand_id": 2,
         "sale": "8%",
         "price": 3800000,
-        "size": "38-47",
         "description": "Giày Adidas UltraBoost 21 với đệm Boost siêu đàn hồi, mang lại trải nghiệm chạy bộ thoải mái.",
         "specification": "Chất liệu: vải Primeknit và đệm Boost; Phù hợp cho chạy bộ và thể thao.",
         "image" : "https://giaygiare.vn/upload/sanpham/adidas-ultra-boost-21-core-black-screaming-orange.jpg"
@@ -44,7 +40,6 @@
         "brand_id": 2,
         "sale": "5%",
         "price": 2000000,
-        "size": "36-46",
         "description": "Giày Adidas Stan Smith với thiết kế đơn giản, biểu tượng và phù hợp cho mọi phong cách.",
         "specification": "Chất liệu: da tổng hợp và cao su; Phù hợp cho thời trang hàng ngày.",
         "image" : "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/f6bfb2c064a64c498e57af1700593332_9366/Giay_Stan_Smith_Lux_trang_HQ6785_HM1.jpg"
@@ -54,7 +49,6 @@
         "brand_id": 2,
         "sale": "12%",
         "price": 3600000,
-        "size": "37-46",
         "description": "Giày Adidas NMD R1 với thiết kế hiện đại và đệm Boost êm ái, mang đến phong cách năng động.",
         "specification": "Chất liệu: vải dệt và đệm Boost; Phù hợp cho thời trang đường phố và thể thao.",
         "image" : "https://assets.adidas.com/images/w_600,f_auto,q_auto/d44fa06fc83f4644b7e8acbc01160e1b_9366/Giay_NMD_R1_DJen_GZ9258_01_standard.jpg"
@@ -64,7 +58,6 @@
         "brand_id": 3,
         "sale": "10%",
         "price": 2800000,
-        "size": "37-46",
         "description": "Giày Puma RS-X3 với thiết kế chunky và màu sắc đa dạng, mang lại phong cách độc đáo.",
         "specification": "Chất liệu: da và vải lưới; Phù hợp cho thời trang đường phố.",
         "image" : "https://balovnxk.vn/wp-content/uploads/2020/12/Puma-RS-X%C2%B3-Super-Red-White-Men-372884-01-2.jpg"
@@ -74,7 +67,6 @@
         "brand_id": 3,
         "sale": "7%",
         "price": 2200000,
-        "size": "36-45",
         "description": "Giày Puma Suede Classic với chất liệu da lộn mềm mại, mang phong cách cổ điển và thanh lịch.",
         "specification": "Chất liệu: da lộn và cao su; Phù hợp cho thời trang hàng ngày.",
         "image" : "https://myshoes.vn/image/data/product11/8.12.17/giay-Puma-suede-classic-nam-navy-01.JPG"
@@ -84,7 +76,6 @@
         "brand_id": 3,
         "sale": "10%",
         "price": 2500000,
-        "size": "36-45",
         "description": "Giày Puma Future Rider với thiết kế retro và đệm Rider Foam, tạo cảm giác nhẹ nhàng và êm ái.",
         "specification": "Chất liệu: vải lưới và đệm Rider Foam; Phù hợp cho thời trang và hoạt động hàng ngày.",
         "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQIULLye4bckQ6wfEAaXLYKzc5zcnP7QTthw&s"
@@ -94,7 +85,6 @@
         "brand_id": 4,
         "sale": "5%",
         "price": 1500000,
-        "size": "35-47",
         "description": "Giày Converse Chuck Taylor All Star cổ điển với thiết kế vải canvas và đế cao su, biểu tượng của phong cách đường phố.",
         "specification": "Chất liệu: vải canvas và cao su; Phù hợp cho thời trang đường phố.",
         "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5sK-qKWy49y5iOCAh5capBFaPkiiT_kLkugT1AR2eyz2gEtnUu8-u4E8Um9HF7QP8org&usqp=CAU"
@@ -104,7 +94,6 @@
         "brand_id": 4,
         "sale": "10%",
         "price": 1800000,
-        "size": "36-46",
         "description": "Giày Converse One Star với logo ngôi sao đặc trưng và thiết kế đơn giản, phù hợp cho mọi phong cách.",
         "specification": "Chất liệu: da lộn và cao su; Phù hợp cho thời trang hàng ngày.",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ69C35_vea8itgt137h6cStLyuP6m8F824gA&s"
@@ -114,7 +103,6 @@
         "brand_id": 4,
         "sale": "15%",
         "price": 2400000,
-        "size": "35-47",
         "description": "Giày Converse Run Star Hike với thiết kế độc đáo, đế cao su dày và phong cách chunky, nổi bật trên phố.",
         "specification": "Chất liệu: vải canvas và cao su; Phù hợp cho thời trang đường phố.",
         "image" : "https://bizweb.dktcdn.net/100/347/923/products/166800v-6.jpg?v=1594276040037"
@@ -134,7 +122,6 @@
         "brand_id": 5,
         "sale": "10%",
         "price": 1800000,
-        "size": "35-47",
         "description": "Giày Vans Sk8-Hi cổ cao với thiết kế bền bỉ và phong cách, được ưa chuộng trong giới trượt ván.",
         "specification": "Chất liệu: vải canvas và cao su; Phù hợp cho thời trang và trượt ván.",
         "image" : "https://bizweb.dktcdn.net/thumb/1024x1024/100/140/774/products/vans-sk8-hi-classic-black-white-vn000d5ib8c-1.jpg"
@@ -144,7 +131,6 @@
         "brand_id": 5,
         "sale": "5%",
         "price": 1400000,
-        "size": "34-46",
         "description": "Giày Vans Authentic với thiết kế tối giản và kiểu dáng cổ điển, phù hợp với nhiều phong cách khác nhau.",
         "specification": "Chất liệu: vải canvas và cao su; Phù hợp cho thời trang hàng ngày.",
         "image" : "https://bizweb.dktcdn.net/thumb/1024x1024/100/140/774/products/vans-authentic-estate-blue-vn0a38emq9w-1.jpg?v=1523451416880"

@@ -6,17 +6,18 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class OrderDetail extends Model
+class Cart extends Model
 {
     use HasFactory;
 
-    protected $table = 'order_details';
+    protected $table = 'carts';
+
     protected $fillable = [
-        'order_id',
+        'user_id',
         'product_id',
         'quantity',
-        'sub_total',
-        'size'
+        'size',
+        'sub_total'
     ];
 
     public function product(): BelongsTo
@@ -24,8 +25,8 @@ class OrderDetail extends Model
         return $this->belongsTo(Product::class);
     }
 
-    public function order(): BelongsTo
+    public function user(): BelongsTo
     {
-        return $this->belongsTo(Order::class);
+        return $this->belongsTo(User::class);
     }
 }

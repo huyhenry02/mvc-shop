@@ -5,23 +5,31 @@
         <h1 class="h1 text-center mb-4">Xác Nhận Đơn Hàng</h1>
         <div class="row">
             <div class="col-md-8">
+                <form action="{{ route('customer.post.checkout') }}" method="post">
+                    @csrf
                 <h5>Thông Tin Giao Hàng</h5>
-                <form>
                     <div class="form-group mb-3">
-                        <label for="fullname">Họ và Tên</label>
-                        <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Nhập họ và tên" required>
+                        <label for="ship_name">Họ và Tên</label>
+                        <input type="text" class="form-control" id="ship_name" name="ship_name"
+                               placeholder="Nhập họ và tên" required>
                     </div>
                     <div class="form-group mb-3">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Nhập email" required>
+                        <label for="ship_email">Email</label>
+                        <input type="email" class="form-control" id="ship_email" name="ship_email"
+                               placeholder="Nhập email" required>
                     </div>
                     <div class="form-group mb-3">
-                        <label for="phone">Số Điện Thoại</label>
-                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
+                        <label for="ship_phone">Số Điện Thoại</label>
+                        <input type="tel" class="form-control" id="ship_phone" name="ship_phone"
+                               placeholder="Nhập số điện thoại" required>
                     </div>
                     <div class="form-group mb-3">
                         <label for="address">Địa Chỉ</label>
-                        <textarea class="form-control" id="address" name="address" rows="3" placeholder="Nhập địa chỉ giao hàng" required></textarea>
+                        <textarea class="form-control" id="address" name="ship_address" rows="3"
+                                  placeholder="Nhập địa chỉ giao hàng" required></textarea>
+                    </div>
+                    <div class="text-end">
+                        <button class="btn btn-primary btn-lg">Xác Nhận Đơn Hàng</button>
                     </div>
                 </form>
             </div>
@@ -33,7 +41,7 @@
                     <div class="card-body">
                         <h6 class="d-flex justify-content-between">
                             <span>Tổng Tiền:</span>
-                            <span>₫1,200,000</span>
+                            <span>₫{{ number_format($totalCart, 0, ',', '.') ?? '' }}</span>
                         </h6>
                         <h6 class="d-flex justify-content-between">
                             <span>Phí Vận Chuyển:</span>
@@ -41,16 +49,13 @@
                         </h6>
                         <h6 class="d-flex justify-content-between">
                             <span>Giảm Giá:</span>
-                            <span>-₫50,000</span>
+                            <span>-₫30,000</span>
                         </h6>
                         <hr>
                         <h5 class="d-flex justify-content-between">
                             <span>Tổng Cộng:</span>
-                            <span class="text-success">₫1,180,000</span>
+                            <span class="text-success">₫{{ number_format($totalCart, 0, ',', '.') ?? '' }}</span>
                         </h5>
-                    </div>
-                    <div class="card-footer text-center">
-                        <button class="btn btn-primary btn-lg">Xác Nhận Đơn Hàng</button>
                     </div>
                 </div>
             </div>

@@ -49,20 +49,25 @@
                         <div class="col-md-4">
                             <div class="card mb-4 product-wap rounded-0">
                                 <div class="card rounded-0">
-                                    <img class="card-img rounded-0 img-fluid" src="{{ $product->image }}" style="height: 390px  !important; ">
+                                    <img class="card-img rounded-0 img-fluid" src="{{ $product->image }}" style="height: 390px  !important; " alt="">
                                     <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                         <ul class="list-unstyled">
-                                            <li><a class="btn btn-success text-white" href="#"><i class="far fa-heart"></i></a></li>
-                                            <li><a class="btn btn-success text-white mt-2" href="#"><i class="far fa-eye"></i></a></li>
-                                            <li><a class="btn btn-success text-white mt-2" href="#"><i class="fas fa-cart-plus"></i></a></li>
+                                            <li><a class="btn btn-success text-white mt-2" href="{{ route('customer.productDetail', $product->id) }}"><i class="far fa-eye"></i></a></li>
+                                            <li>
+                                                <form action="{{ route('customer.addToCart') }}" method="post">
+                                                    @csrf
+                                                    <button class="btn btn-success text-white mt-2" type="submit"><i class="fas fa-cart-plus"></i>
+                                                        <input type="hidden" name="product_id" value="{{ $product->id }}">
+                                                    </button>
+                                                </form>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <a href="shop-single.html" class="h3 text-decoration-none">{{ $product->name ?? '' }}</a>
+                                    <a href="{{ route('customer.productDetail', $product->id) }}" class="h3 text-decoration-none">{{ $product->name ?? '' }}</a>
                                     <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                        <li>M/L/X/XL</li>
-
+                                        <li>37/38/39/40/41/42</li>
                                     </ul>
                                     <ul class="list-unstyled d-flex justify-content-center mb-1">
                                         <li>
